@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Tajawal", system-ui, sans-serif;
+  --color-brand-orange: #FF6B00;
+  --color-brand-orange-dark: #FF9500;
+  --color-brand-blue: #3b82f6;
+  --color-brand-blue-dark: #2563eb;
+  --color-bg-dark: #050507;
+  --color-bg-panel: #111115;
+  --color-bg-nav: #0a0a0c;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: #f3f4f6;
+  font-family: var(--font-sans);
+}
+
+/* Base layouts utilities */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: var(--color-bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.gradient-card {
+  background: linear-gradient(to bottom right, #1a1a20, #0a0a0c);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 107, 0, 0.3);
+}
+
+/* Image styling consistent to match generated assets */
+.hero-bg {
+  background-image: url('./assets/images/hero_bg_fitness_1780097682895.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
